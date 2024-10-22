@@ -1,0 +1,519 @@
+/* General Body Styles */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0; 
+}
+
+h1 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 70px;
+    margin-left: 30px;
+    color: #283c46;
+}
+
+h2 {
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 55px;
+    margin-left: 30px;
+    color: #283c46;
+}
+
+p {
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #283c46;
+    line-height: 1.5;
+}
+
+main {
+    flex: 1;
+}
+/*End of Body Styles */
+
+
+/* Start of Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6f8da2;
+    padding: 15px 0px 15px 0px;
+    width: 100%;
+   
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    padding-left: 30px;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    display: block;
+    font-family: futura-pt, sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 33px;
+    margin-right: 40px;
+}
+
+.nav-links a:hover {
+    background-color: #c8ccce;
+    border-radius: 4px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 965px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+}
+/* End of Navbar styles */
+
+
+/* Start of Home Page - Home Page Hero Section */
+main > section.hero {
+    background-image: url(images/herobanner.png);
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    margin-bottom: 60px;
+    width: 100%;  
+    overflow: hidden; 
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.65); 
+    color: #283c46;
+    padding: 30px;
+    border: #283c46 solid 2px;
+    text-align: center;
+    animation: flyInRight 1s ease-out; 
+}
+
+@keyframes flyInRight {
+    from {
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+.home-introduction h2 {
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.home-introduction p {
+    margin: 0 auto; 
+    max-width: 1200px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+
+.trailer {
+    font-size: 2em;
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-content .trailer-link > button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #283c46; 
+    color: #c8ccce; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease, opacity 0.3s ease;
+}
+
+.hero-content .trailer-link > button:hover {
+    background-color: #1f2a34; 
+    opacity: 0.80; 
+}
+
+.hero-content .trailer-link > button:active {
+    background-color: #283c46; 
+    box-shadow: 0 2px #666; 
+    transform: translateY(2px); 
+}
+
+.intro-quote {
+    margin: 50px auto; 
+    padding: 40px 0px;
+    position: relative;
+    text-align: center;
+    width: 100%; 
+    background-color: #91aec4;
+    border-top:#1f2a34 solid .75px;
+    border-bottom:#1f2a34 solid .75px;
+}
+
+.intro-quote span {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: adobe-garamond-pro, serif;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 35px;
+    color: #283c46;
+}
+
+.intro-quote::before {
+    top: 0;
+}
+
+.intro-quote::after {
+    bottom: 0;
+}
+
+/* Home Page - Directory Section */
+.directory {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: nowrap; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+}
+
+.homedirectorytitle {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.directory a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px; 
+    height: 350px;
+    margin: 50px 20px 80px 20px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: inherit; 
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: opacity 0.3s ease, box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+.characterschild p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+
+.movie-summarychild p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+
+.awards-triviachild p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+
+.directory a.characterschild {
+    background-image: url('images/characters400x400.jpg');
+}
+
+.directory a.movie-summarychild {
+    background-image: url('images/moviesummary400x400.jpg');
+}
+
+.directory a.awards-triviachild {
+    background-image: url('images/awards-400x400.jpg');
+}
+
+.directory a div {
+    background-color: white; 
+    padding: 10px 20px;
+    opacity: .65;
+    border: #283c46 solid 2px;
+}
+
+.directory a:hover {
+    opacity: 0.65;
+}
+
+.directory a:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transform: translateY(2px); 
+}
+
+@media (max-width: 900px) {
+    .directory {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .directory a {
+        width: 350px; 
+        height: 350px;
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    main > section.hero {
+        height: 60vh; 
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding: 15px; 
+    }
+
+    .trailer {
+        font-size: 1.5em; 
+    }
+
+    .hero-content .trailer-link > button { 
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section.hero {
+        height: 40vh;
+        padding: 5px;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    p.trailer {
+        font-size: 1.2em; 
+    }
+
+    .hero-content .trailer-link > button { 
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-introduction h2, .homedirectorytitle, .how-to-watch h2 {
+        font-family: adobe-garamond-pro, serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 45px;
+        margin-left: 30px;
+        color: #283c46; 
+    }
+}
+
+@media (max-width: 400px) {
+    .home-introduction h2, .homedirectorytitle, .how-to-watch h2 {
+        font-family: adobe-garamond-pro, serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 30px;
+        margin-left: 30px;
+        color: #283c46; 
+    }
+}
+
+@media (max-width: 768px){
+    .intro-quote span {
+        font-family: adobe-garamond-pro, serif;
+        font-style: italic;
+        font-weight: bold; /* Corrected from '700px' to 'bold' */
+        font-size: 25px;
+        color: #283c46;
+    }
+}
+
+
+
+.how-to-watch {
+        text-align: center;
+        background-color: #91aec4; /* Updated background color */
+        margin: 0px;
+        padding: 25px 0px 90px 0px;
+        border-top:#1f2a34 solid .75px;
+        border-bottom:#1f2a34 solid .75px;
+    }
+
+.how-to-watch h2 {
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 55px;
+    color: #283c46;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px; 
+    column-gap: 50px;
+    justify-content: center;
+    
+}
+
+.button-container a {
+    border: 2px solid #283c46;
+    color: #283c46;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-container a:hover {
+    background-color: #283c46;
+    color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+    .button-container {
+        grid-template-columns: 1fr;
+    }
+
+    .how-to-watch h2 {
+        font-size: 35px;
+    }
+
+    .button-container a {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* End of Home Page */
+
+/* Footer Section */
+.footer {
+    background-color: #6f8da2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    display: inline-block;
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin: 10px 0;
+    }
+}
+/* End of Footer Section */
+/* End of Page */
