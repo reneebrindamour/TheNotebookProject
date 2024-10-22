@@ -242,6 +242,7 @@ main > section.hero {
 .intro-quote::after {
     bottom: 0;
 }
+
 /* Home Page - Directory Section */
 .directory {
     display: flex;
@@ -334,10 +335,10 @@ main > section.hero {
         width: 350px; 
         height: 350px;
         margin: 10px 0; 
-
     }
 }
 
+@media (max-width: 768px) {
     main > section.hero {
         height: 60vh; 
         padding: 10px;
