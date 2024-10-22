@@ -129,6 +129,32 @@ main {
 /* End of Navbar styles */
 
 
+/* Start of Snyopsis Page*/
+
+.synopsis-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.synopsis-container h1 {
+    margin: 30px 0px 30px 0px;
+}
+
+.synopsis-container h2 {
+    margin: 30px 0px 30px 0px;
+}
+
+@media (max-width: 1285px) {
+    .synopsis-container {
+        margin: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .synopsis-container h1 {
+        font-size: 50px;
+
+
 
 
 /* Start of Cast Page */
@@ -465,10 +491,43 @@ main > section.hero {
         width: 350px; 
         height: 350px;
         margin: 10px 0; 
+
     }
 }
 
 @media (max-width: 768px) {
+
+    .synopsis-container h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .synopsis-container p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .synopsis-container h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 500px) {
+    .synopsis-container h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .synopsis-container p {
+        font-size: 25px;
+    }
+}
+/* End of Snyopsis Page*/
+
+
     main > section.hero {
         height: 60vh; 
         padding: 10px;
@@ -604,6 +663,7 @@ main > section.hero {
 
 /* End of Home Page */
 
+
 /* Footer Section */
 .footer {
     background-color: #6f8da2;
@@ -645,4 +705,6 @@ main > section.hero {
     }
 }
 /* End of Footer Section */
+
 /* End of Page */
+
